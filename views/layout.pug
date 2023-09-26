@@ -2,19 +2,20 @@ doctype html
 head
   base(href='/')
   meta(charset='utf-8')
-  link(rel='apple-touch-icon' sizes='76x76' href='/img/apple-touch-icon.png')
-  link(rel='icon' type='image/png' href='/img/mgmresorts.png')
+  link(rel='apple-touch-icon' sizes='76x76' href='/img/apple-icon.png')
+  link(rel='icon' type='image/png' href='/img/favicon-32x32.png')
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
-  title MGM Identity Verification
-  meta(name="description" content="Identity Verification for MGM Access")
+  title Auth0 + Onfido Demo
+  meta(name="description" content="A simple demo app to show Onfido + Auth0")
   meta(name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0")
+
   meta(meta name="mobile-web-app-capable" content="yes")
-  link(rel="icon" sizes="192x192" href="/img/android-chrome-192x192.png")
+  link(rel="icon" sizes="192x192" href="/img/android-desktop.png")
 
   meta(name="apple-mobile-web-app-capable" content="yes")
   meta(name="apple-mobile-web-app-status-bar-style" content="black")
-  meta(name="apple-mobile-web-app-title" content="MGM Identity Verification")
-  link(rel="apple-touch-icon-precomposed" href="/img/mgmresorts.png")
+  meta(name="apple-mobile-web-app-title" content="Onfido + Auth0")
+  link(rel="apple-touch-icon-precomposed" href="/img/ios-desktop.png")
 
   link(rel="shortcut icon" href="/img/favicon-32x32.png")
   // Fonts and icons
@@ -25,14 +26,17 @@ head
   script(defer src="https://code.getmdl.io/1.3.0/material.min.js")
   script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous")
 
-body(style="background-image: url('/img/mgmresortsbg.png'); background-size: cover;")
-    .demo-layout.mdl-layout.mdl-layout--fixed-header.mdl-js-layout
+body
+    .demo-layout.mdl-layout.mdl-layout--fixed-header.mdl-js-layout.mdl-color--grey-100
         header.demo-header.mdl-layout__header.mdl-layout__header--scroll.mdl-color--grey-100.mdl-color-text--grey-800
-            .mdl-layout__header-row
-                span.mdl-layout-title MGM Identity Verification
+            .mdl-layout__header-row 
+                span.mdl-layout-title Auth0 Identity Verification ( Onfido)
                 .mdl-layout-spacer
                 button.mdl-button.mdl-js-button.mdl-button--icon#menu
-                img(src='/img/mgmresorts.png', alt='MGM Resorts')
+                    i.material-icons more_vert
+                ul.mdl-menu.mdl-menu--bottom-right.mdl-js-menu.mdl-js-ripple-effect(for='menu')
+                    li.mdl-menu__item: a.demo-menu-item(href='https://onfido.com') Onfido
+                    li.mdl-menu__item: a.demo-menu-item(href='https://auth0.com') Auth0
         .demo-ribbon
         main.demo-main.mdl-layout__content
             .demo-container.mdl-grid
@@ -42,6 +46,7 @@ body(style="background-image: url('/img/mgmresortsbg.png'); background-size: cov
         footer.demo-footer.mdl-mini-footer
             .mdl-mini-footer--left-section
                 ul.mdl-mini-footer--link-list
+                    li: a(href='https://github.com/jhickmanit/auth0-onfido') Github
                     li: a(href='#') Help
                     li: a(href='#') Privacy and Terms
                     li: a(href='#') User Agreement

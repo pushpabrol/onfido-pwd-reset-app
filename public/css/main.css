@@ -1,7 +1,7 @@
 .demo-ribbon {
     width: 100%;
     height: 40vh;
-    background: transparent;
+    background-color: #3a44f4;
     flex-shrink: 0;
 }
 .demo-main {
@@ -40,9 +40,9 @@
 .demo-center-text {
     text-align: center;
 }
-.onfido-sdk-ui-Theme-footer .onfido-sdk-ui-Theme-logo {
-    background-image: url("../img/mgmresorts.png") !important;
+.onfido-sdk-ui-Theme-defaultLogo .onfido-sdk-ui-Theme-footer {
+    background-image: url("https://logo.clearbit.com/onfido.com") !important;
 }
 .onfido-sdk-ui-Button-button-primary {
-    background-color: #f4eee1 !important;
+    background-color: #3a44f4 !important;
 }
