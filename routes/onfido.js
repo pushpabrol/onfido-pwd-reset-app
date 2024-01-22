@@ -119,7 +119,7 @@ router.post("/", (req, res) => {
         console.log(auth0Payload)
         //eslint-disable-next-line
         //@ts-ignore
-        const continueUrl = `${auth0Payload.iss}continue/reset-password?state=${auth0State}&session_token=${signed}`
+        const continueUrl = `${auth0Payload.iss}continue?state=${auth0State}&session_token=${signed}`
         //const continueUrl = `${auth0Payload.iss}continue?state=${auth0State}`
         res.redirect(continueUrl)
       })
@@ -138,7 +138,7 @@ router.post("/", (req, res) => {
         }
         const signed = jwt.sign(sessionToken, process.env.APP_SECRET)
         console.log(auth0Payload)
-        const continueUrl = `${auth0Payload.iss}continue/reset-password?state=${auth0State}&session_token=${signed}`
+        const continueUrl = `${auth0Payload.iss}continue?state=${auth0State}&session_token=${signed}`
         res.redirect(continueUrl)
       })
       .catch(error => {
